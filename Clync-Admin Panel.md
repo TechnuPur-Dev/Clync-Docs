@@ -3,22 +3,23 @@
 
 
 
-A  project created in flutter using getx. clone the project using URL mentioned below:
+A  project created in Web using ReactJs. clone the project using the URL mentioned below:
 ```
 https://github.com/TechnuPur-Dev/Clync.git
 ```
 ## Getting Started
 
-This README file offers a comprehensive overview of the project's structure, providing insights into how it adheres to specific architectural patterns, the steps needed to build and configure the project, and an outline of all dependencies used. Additionally, it includes information about the required Flutter and Dart SDK versions, ensuring that developers have the proper setup for smooth project execution.
+This README file provides a detailed overview of the project's structure, explaining how it adheres to specific architectural patterns and outlining steps required to build and configure the project for React developers. It lists all dependencies and includes information about the recommended Node.js and npm versions to ensure a smooth development experience.
 
-Within this README, developers can expect to find details on the design choices guiding the architecture, such as state management techniques and dependency injection patterns, which establish a scalable and maintainable codebase. The setup and installation instructions cover essential steps, making it easy for developers to clone, configure, and run the project locally. Furthermore, the dependencies section lists all libraries and packages crucial for the project, complete with versions and roles, helping developers understand the project’s third-party requirements.
+Within this README, developers will find explanations of design choices that guide the architecture, including state management strategies and dependency management patterns, aimed at establishing a scalable and maintainable codebase. The setup and installation instructions cover essential steps, making it straightforward to clone, configure, and run the project locally. The dependencies section lists all libraries and packages used in the project, along with versions and roles, so developers understand the third-party tools and frameworks involved.
 
-By following this README, developers can gain a solid understanding of the project's structure, architecture, and dependencies, enabling them to contribute effectively or extend the project according to their needs.
+Following this README allows developers to comprehensively understand the project’s structure, architectural decisions, and dependencies, empowering them to contribute effectively or extend the project as needed.
 
 ## System Requirements 
 
-* Dart SDK: Version 3.0.0 or greater 
-* Flutter SDK: Version 3.10.0 or greater 
+* React: Version 18.3.1
+* Node.js: Version 18.0.0 or greater
+* npm: Version 9.0.0 or greater
 
 
 ## How to Use 
@@ -33,71 +34,72 @@ https://github.com/TechnuPur-Dev/Clync.git
 
 **Step 2:**
 
-Go to project root and execute the following command in console to get the required dependencies: 
+Navigate to the project root and install the required dependencies by running the following command:
 
 ```
-flutter pub get 
+npm install
 ```
 
 **Step 3:**
 
-For IOS run the following command in your terminal: 
+To start the development server and run the project locally:
 
 ```
- flutter build Ios 
+ npm start 
 ```
 
-For Android run the following command in your terminal: 
+To create an optimized production build, use the following command:
 
 ```
- flutter build apk 
+ npm run build
 ```
 
-To run the app on a connected device: 
+To run tests (if any are included), use: 
 
 ```
- flutter run 
+ npm test
 ```
 
-## Hide Generated Files
+## Managing Unwanted Files
 
-In-order to hide generated files, navigate to `Android Studio` -> `Preferences` -> `Editor` -> `File Types` and paste the below lines under `ignore files and folders` section:
+At the root of your project, create or edit the .gitignore file to exclude commonly generated files and folders from version control. Add the following entries to ensure that dependencies, build artefacts and environment files are ignored:
 
 ```
-*.inject.summary;*.inject.dart;*.g.dart;
+**/node_modules
+**/build
+**/.env
 ```
+This configuration ensures that any files matching these patterns won’t be tracked in version control (e.g., Git).
 
 In Visual Studio Code, navigate to `Preferences` -> `Settings` and search for `Files:Exclude`. Add the following patterns:
 ```
-**/*.inject.summary
-**/*.inject.dart
-**/*.g.dart
+**/node_modules
+**/build
+**/.env
 ```
 
 ## Features:
 
-* Splash
-* Login
-* Home
-* Routing
-* Theme
-* Dio
-* Database
-* Getx (State Management)
-* Encryption
-* Validation
-* User Notifications
-* Dependency Injection
-* Localization
+* User Authentication (Login, Registration, Logout)
+* Dashboard Home
+* Routing with react-router-dom
+* Customizable Theme (Light/Dark Mode)
+* API Integration with Axios
+* Data Visualization with react-apex-charts
+* Form Validation using react-hook-form
+* User Notifications with react-toastify
+* Responsive Design with react-bootstrap
+* Role-based Access Control
+* Date and Time Management with moment and react-datepicker
 
 ### Libraries & Tools Used
 Following tools and libraries are used in this project 
 
-* Get 
+* @emotion/react
 
-Version: ^4.6.6 
+Version: ^11.11.4
 
-Description: A powerful state management solution that simplifies dependency management and UI updates. 
+Description: Provides a flexible styling solution for React components using Emotion.
 
 Link: https://pub.dev/packages/get 
 * connectivity_plus 
@@ -106,679 +108,332 @@ Version: ^6.0.5
 
 Description: Provides tools to check network connectivity status. 
 
-Link: https://pub.dev/packages/connectivity_plus 
-* Shared_preferences 
+Link: https://www.npmjs.com/package/@emotion/react 
+* @emotion/styled
 
-Version: ^2.3.2 
+Version: ^11.11.5
 
-Description: Simple storage for persistent data like user preferences. 
+Description: Styled component library for React using Emotion.
 
-Link: https://pub.dev/packages/shared_preferences 
-* cached_network_image 
+Link: https://www.npmjs.com/package/@emotion/styled
+* @mui/material 
 
-Version: ^3.4.1 
+Version: ^5.15.17 
 
-Description: Caches images for offline use to improve loading times. 
+Description: Material UI library for React, providing a set of accessible and customizable UI components.
 
-Link: https://pub.dev/packages/cached_network_image 
-* Flutter_svg 
-
-Version: ^2.0.10+1 
-
-Description: Renders SVG images in Flutter applications. 
-
-Link: https://pub.dev/packages/flutter_svg 
-* intl 
-
-Version: ^0.18.1 
-
-Description: Supports internationalization and localization for dates, numbers, and messages. 
-
-Link: https://pub.dev/packages/intl 
-* blur 
-
-Version: 3.1.0 
-
-Description: Applies blur effects to widgets for visual appeal. 
-
-Link: https://pub.dev/packages/blur 
-* permission_handler 
-
-Version: ^11.3.0 
-
-Description: Manages permissions for accessing device features. 
-
-Link: https://pub.dev/packages/permission_handler 
-* flutter_screenutil 
-
-Version: ^5.9.0 
-
-Description: Assists with responsive layouts across different screen sizes. 
-
-Link: https://pub.dev/packages/flutter_screenutil 
-* simple_animation_progress_bar 
-
-Version: ^1.6.0 
-
-Description: A progress bar with simple animations. 
-
-Link: https://pub.dev/packages/simple_animation_progress_bar 
-* overlay_loading_progress 
-
-Version: ^1.0.1 
-
-Description: Displays loading overlays during network requests. 
-
-Link: https://pub.dev/packages/overlay_loading_progress 
-* qr_code_scanner 
-
-Version: ^1.0.1 
-
-Description: Enables QR code scanning functionality. 
-
-Link: https://pub.dev/packages/qr_code_scanner 
-* local_auth 
-
-Version: ^2.2.0 
-
-Description: Provides local authentication features like fingerprint recognition. 
-
-Link: https://pub.dev/packages/local_auth 
-* flutter_date_pickers 
-
-Version: ^0.4.2 
-
-Description: A customizable date picker widget. 
-
-Link: https://pub.dev/packages/flutter_date_pickers 
-* table_calendar 
-
-Version: ^3.0.9 
-
-Description: A highly customizable calendar widget. 
-
-Link: https://pub.dev/packages/table_calendar 
-* dio 
-
-Version: ^5.4.1 
-
-Description: A powerful HTTP client for network requests. 
-
-Link: https://pub.dev/packages/dio 
-* image_picker 
-
-Version: ^1.1.2 
-
-Description: Allows users to select images from the gallery or camera. 
-
-Link: https://pub.dev/packages/image_picker
-* flutter_secure_storage 
-
-Version: ^9.2.2 
-
-Description: Securely stores sensitive data. 
-
-Link: https://pub.dev/packages/flutter_secure_storage 
-* Firebase Packages 
-
-   Version: 
-  * firebase_crashlytics: ^4.1.3 
-
-  * firebase_analytics: ^11.3.2 
-
-  * firebase_core: ^3.5.0 
-
-  * Firebase_messaging: ^15.1.2 
-
-Description: Suite of libraries for integrating Firebase services. 
-* google_maps_flutter 
-
-Version: ^2.9.0 
-
-Description: Displays Google Maps within the app. 
-* flutter_local_notifications 
-
-Version: ^17.2.3 
-
-Description: Manages local notifications. 
-
-Link: https://pub.dev/packages/flutter_local_notifications 
-* lottie 
-
-Version: ^3.1.2 
-
-Description: Supports Lottie animations for rich user interfaces. 
-
-Link: https://pub.dev/packages/lottie 
-* hive 
+Link: https://www.npmjs.com/package/@mui/material
+* @reduxjs/toolkit
 
 Version: ^2.2.3 
 
-Description: Lightweight and fast NoSQL database for structured data. 
+Description: A Redux library that simplifies state management and enhances development efficiency.
 
-Link: https://pub.dev/packages/hive 
-* flutter_slidable 
+Link: https://www.npmjs.com/package/@reduxjs/toolkit
+* Axios 
 
-Version: ^3.1.0 
+Version: ^1.6.8
 
-Description: Enables sliding actions for list items. 
+Description: Promise-based HTTP client for making network requests.
 
-Link: https://pub.dev/packages/flutter_slidable 
+Link: https://www.npmjs.com/package/axios
+* react-router-dom 
 
+Version: ^6.21.3
+
+Description: Declarative routing library for React applications to manage navigation and URL handling. 
+
+Link: https://www.npmjs.com/package/react-router-dom
+* react-redux 
+
+Version: ^9.1.1
+
+Description: Official React bindings for Redux, enabling state management in React apps. 
+
+Link: https://www.npmjs.com/package/react-redux
+* React-toastify
+
+Version: ^10.0.5
+
+Description: Provides toasts and notifications in React applications. 
+
+Link: https://www.npmjs.com/package/react-toastify
+* redux-persist 
+
+Version: ^6.0.0
+
+Description: A library to persist and rehydrate Redux state between sessions. 
+
+Link: https://www.npmjs.com/package/redux-persist
+* React-datepicker
+
+Version: ^6.9.0
+
+Description: A React component for date-picking functionality with customizable options.
+
+Link: https://www.npmjs.com/package/react-datepicker 
+* react-select 
+
+Version: ^5.8.0 
+
+Description: A flexible and customizable dropdown component for React.
+
+Link: https://www.npmjs.com/package/react-select
+* react-bootstrap
+
+Version: ^2.10.2
+
+Description: A popular React component library that integrates Bootstrap with React.
+
+Link: https://www.npmjs.com/package/react-bootstrap
+* react-calendar 
+
+Version: ^5.0.0
+
+Description: A customizable calendar component for React apps. 
+
+Link: https://www.npmjs.com/package/react-calendar 
+* react-qr-code
+
+Version: ^2.0.12 
+
+Description: A React component for rendering QR codes.
+
+Link: https://www.npmjs.com/package/react-qr-code
+* react-apexcharts 
+
+Version: ^1.4.1 
+
+Description: React component for ApexCharts, a powerful charting library.
+
+Link: https://www.npmjs.com/package/react-apexcharts 
+* moment
+
+Version: ^2.30.1
+
+Description: A popular library for date and time manipulation in JavaScript.
+
+Link: https://www.npmjs.com/package/moment
+* redux 
+
+Version: ^5.0.1
+
+Description: A predictable state container for JavaScript apps.
+
+Link: https://www.npmjs.com/package/redux
+* sonner
+
+   Version: ^1.4.41 
+
+Description: A lightweight, flexible toast notification system for React.
+
+Link: https://www.npmjs.com/package/sonner
+* react-js-loader
+
+Version: ^0.1.3
+
+Description: A React component for displaying loading spinners and progress indicators.
+
+Link: https://www.npmjs.com/package/react-js-loader
+* web-vitals
+
+Version: ^2.1.4
+
+Description: A library to measure essential web performance metrics.
+
+Link: https://www.npmjs.com/package/web-vitals
 
 
 ### Folder Structure
 Here is the core folder structure which flutter provides.
 
 ```
-flutter-app/
-|- android
+CLYNC-ADMIN/
+|- github
 |- build
-|- ios
-|- lib
-|- test
+|- public
+|- src
 ```
 
 Here is the folder structure we have been using in this project
 
 ```
-├── android                             - It contains files required to run the application on an Android platform.
-├── assets                              - It contains all images and fonts of your application.
- └── Fonts                              - Contains the font used in the application. 
- └── Gifs                               - Contains the Gifs used in the application. 
- └── Icons                              - Contains the Icons used in the application. 
- └── Images                             - Contains the Images used in the application. 
- └── Svgs                               - Contains the Svgs used in the application. 
-├── ios                                 - It contains files required to run the application on an iOS platform.
-├── lib                                 - Most important folder in the application, used to write most of the Dart code..
-  └── main.dart                         - Starting point of the application
-     ├── core                           - Core utilities and configurations. 
-         └── constants                  - Stores application-wide constants. 
-         └── errors                     - Error handling classes. 
-         └── network                    - Network-related classes and configurations. 
-         └── Localization               - Contains the translated Arabic text. 
-         └── routes                     - Navigation routes for the app. 
-         └── Services                   - Contains all services used in the app. 
-         └── Utils                      - Contains utility classes used in the app. 
-         └── Webview                    - Contains the WebView for the app.
-     ├── app_export.dart                - Common imports used across the app.  
-├── data                                - Data layer of the app.
-      └── apiClient                     - API client classes and methods. 
-      └── models                        - Data models for requests/responses. 
-      └── Local_database                - Storage database used in the app. 
-      └── Services                      - Socket service classes. 
-├── presentation                        - It contains widgets of the screens with their controllers and the models of the whole application.
-       └── bindings                     - Dependency injection bindings. 
-       └── controllers                  - Contains GetX controllers (Business Logic). 
-       └── models                       - UI-related models (Data Models, if needed). 
-       ├── screens                      - UI layer, containing all screen widgets
-             └── Authentication         - Screens related to user authentication. 
-             └── Financial              - All financial-related screens of the app. 
-             └── Home                   - Home screen of the app. 
-             └── Onboarding             - Onboarding screen of the app. 
-             └── Profile                - User profile screen of the app. 
-             └── Services               - Screens related to services in the app. 
-             └── Settings               - Settings screen of the app. 
-             └── Social                 - Screens related to social activities in the app. 
-├── theme                               - It contains app theme and decoration classes
-├── widgets                             - It contains all custom widget classes
+├── public                              - Public files accessible to the browser
+├── src                                 - Main source folder for all React code
+    ├── actions                           - Redux actions (if using Redux)
+    ├── components                        - Reusable UI components (Buttons, Modals, etc.)
+    ├── fonts                             - Font files used in the application
+    ├── functions                         - Helper functions or utilities
+    ├── img                               - All image assets (including GIFs, Icons)
+    ├── interceptors                      - HTTP interceptors (for requests/responses, e.g., Axios interceptors)
+    ├── redux                             - Redux-related files (reducers, store, actions)
+    ├── routes                            - Contains routes or pages for navigation
+    ├── utils                            - Utility functions or classes (e.g., formatting, validation)
+    ├── views                            - Screen or page components (Home, Profile, etc.)
+    ├── app.tsx                           - Main app component
+    ├── app.css                          - Global styles for the app
+    ├── index.tsx                           - Main app component (entry point)
+    └── config.js                        - Centralized configuration file (API endpoints, etc.)
+├── .env                                 - Environment variables (e.g., API URLs, authentication keys)
+├── package.json                        - Node.js dependencies and scripts
+├── .gitignore                          - Files to ignore in version control
+├── node_modules                        - Project dependencies
+└── README.md                           - Project documentation
 ```
 
 Now, lets dive into the lib folder which has the main code for the application.
 
 ```
-1- constants - All the application level constants are defined in this directory with-in their respective files. This directory contains the constants for `theme`, `dimentions`, `api endpoints`, `preferences` and `strings`.
-2- data - Contains the data layer of your project, includes directories for local, network and shared pref/cache.
-3: bindings - Contains the dependency injection bindings for the application. Each screen has its own binding class where dependencies specific to that screen are defined.
-4: controller - Contains the controllers that manage the state and business logic of your application's components. Each screen has its own controller class where the logic specific to that screen is defined.
-5: models - Contains all the data models used in the application. Each model is located in a separate folder, making it easy to manage files related to that particular model.
-6- presentation — Contains all the ui of your project, contains sub directory for each screen and including controllers and models.
-7- util — Contains the utilities/common functions of your application.
-8- widgets — Contains the common widgets for your applications. For example, Button, TextField etc.
-9- routes.dart — This file contains all the routes for your application.
-10- main.dart - This is the starting point of the application. All the application level configurations are defined in this file i.e, theme, routes, title, orientation etc.
+1- actions - Contains the Redux actions that are responsible for dispatching events to update the application’s state.
+2- components - Holds reusable UI components, such as `Buttons`, `Modals`, `Card` components, etc., which are shared across multiple screens or views in the app.
+3- fonts - This directory contains all the font files used in the application, typically `.woff`, `.woff2`, `.ttf`, or `.otf` files.
+4- functions - Contains helper functions or utilities that are used across the application for various tasks like formatting, parsing, or calculations.
+5- img - Contains all the image assets used in the app, including static images, GIFs, icons, or other visual resources.
+6- interceptors - Contains HTTP interceptors, such as those used with `Axios`, for handling requests and responses globally (e.g., adding authorization headers, handling errors).
+7- redux - This folder contains all the Redux-related files, including reducers, actions, and store configuration.
+8- routes - Contains route definitions for navigation within the app, mapping paths to specific page components.
+9- utils - Includes utility functions or classes that provide common functionality, such as validation, logging, or other reusable logic.
+10- views - Contains the main screen or page components like `Home`, `Profile`, `Dashboard`, etc. These components represent the different views or sections of the app.
+11- app.tsx - This is the root application component that ties everything together. It includes global configurations and renders the main layout of the app.
+12- app.css - This file contains global styles or shared CSS that apply to the entire application.
+13- index.tsx - The entry point for the React app, responsible for rendering the root component (`app.tsx`) into the DOM.
+14- config.js - Centralized configuration file where API endpoints, authentication keys, or other global settings are defined.
 ```
 
-### Constants
+### Actions
 
-This directory contains all the application level constants. A separate file is created for each type as shown in example below:
-
-```
-constants/
-|- constants.dart
-|- image_constant.dart
-|- api_endpoint_constant.dart
-|- Color_constant.dart
-```
-
-### Data
-
-All the business logic for API calls and loacal database (for chats) will go into this directory.
-```
-lib\data\api_client
-
-lib\data\local_database
-
-lib\data\models
-```
-### Bindings
-
-Bindings are used to manage the dependencies and lifecycle of your application's components. They help in initializing controllers, services, and other dependencies required by your screens. Each screen can have its own binding class where you can define the dependencies specific to that screen.
+Actions are responsible for managing the data flow in your application. They handle side-effects, such as making API calls, and dispatch necessary updates to the Redux store or component state. Each action typically involves communication with an API and manages the state transitions based on the response:
 
 ```
-lib\presentation\bindings
-        └── bottom_navigation_binding.dart - Manages bottom navigation dependencies.
-        └── change_number_bindings.dart - Handles dependencies for changing number.
-        └── edit_profile_binding.dart - Manages profile editing dependencies.
-        └── forgot_password_binding.dart - Handles dependencies for forgot password process.
-        └── login_binding.dart - Manages login dependencies.
-        └── qr_code_binding.dart - Handles dependencies for QR code functionalities.
-        └── sign_in_binding.dart - Manages sign-in dependencies.
-        └── sign_up_binding.dart - Handles dependencies for sign-up process.
-        └── splash_binding.dart - Manages splash screen dependencies.
+src\actions
+        └── action.js - Contains actions related to user login, including `LoginUser` for logging in users.
+        └── actionStatistics.js - Contains actions for fetching statistics and graphs, such as:
+            └── `getFinancialHubStatistics` - Fetches financial hub statistics.
+            └── `getTransfersGraph` - Retrieves transfer-related graph data.
+            └── `getSocialHubStatistics` - Fetches social hub statistics.
+            └── `getSocialHubMembers` - Gets the list of members in the social hub.
+            └── `getSocialHubTransactionData` - Retrieves social hub transaction data.
+            └── `handleSearch` - Manages search functionality for different data types.
+            └── `getUserHourlyOfToday` - Retrieves hourly data of users for the current day.
+        └── homeAction.js - Contains actions related to the home screen, such as:
+            └── `getHomeStatistics` - Fetches statistics for the home screen.
+            └── `getTopTransfers` - Retrieves top transfers data for display.
+            └── `handleSearch` - Manages search functionality for the home screen.
+            └── `getGoogleAnalytics` - Fetches Google Analytics data for the home dashboard.
+        └── legalTerms.js - Contains actions related to community and legal terms, such as:
+            └── `aboutUs` - Fetches information about the community or company.
+            └── `termsAndConditions` - Retrieves the terms and conditions for the application.
+            └── `privacyPolicy` - Fetches privacy policy details for the app.
+        └── transaction.js - Manages transaction-related actions, including:
+            └── `getReasons` - Fetches the reasons for transactions.
+            └── `createReason` - Creates a new transaction reason.
+            └── `updateReason` - Updates an existing transaction reason.
+            └── `deleteReason` - Deletes a transaction reason.
 ```
+### Components
 
-### Contrllers
-
-Controllers are used to manage the state and business logic of your application's components. They help in handling user interactions, updating the UI, and communicating with services or repositories. Each screen can have its own controller class where you can define the logic specific to that screen.
-
-```
-lib\presentation\controller
-        └── ServiceHub
-        └── SocialHub
-        └── blocked_user_controller.dart - Manages blocked user functionalities.
-        └── bottom_navigation_controller.dart - Controls bottom navigation logic.
-        └── change_number_controller.dart - Handles change number operations.
-        └── chat_controller.dart - Manages chat functionalities.
-        └── circle_detail_controller.dart - Controls circle detail view.
-        └── create_circle_controller.dart - Manages circle creation process.
-        └── create_pocket_controller.dart - Handles pocket creation.
-        └── create_saving_pocket_controller.dart - Manages saving pocket creation.
-        └── direct_chat_controller.dart - Controls direct chat functionalities.
-        └── edit_poll_controller.dart - Handles poll editing.
-        └── edit_profile_controller.dart - Manages profile editing.
-        └── financial_controller.dart - Controls financial operations.
-        └── forgot_password_controller.dart - Handles forgot password process.
-        └── forward_message_controller.dart - Manages message forwarding.
-        └── home_controller.dart - Controls home screen logic.
-        └── login_controller.dart - Handles login operations.
-        └── manage_saving_pocket_controller.dart - Manages saving pocket functionalities.
-        └── notification_setting_controller.dart - Controls notification settings.
-        └── poll_controller.dart - Manages poll functionalities.
-        └── privacy_controller.dart - Handles privacy settings.
-        └── qr_code_controller.dart - Manages QR code functionalities.
-        └── scan_id_card_controller.dart - Handles ID card scanning.
-        └── send_money_controller.dart - Manages money sending operations.
-        └── settings_controller.dart - Controls application settings.
-        └── sign_in_controller.dart - Handles sign-in operations.
-        └── sign_up_controller.dart - Manages sign-up process.
-        └── social_controller.dart - Controls social functionalities.
-        └── splash_controller.dart - Manages splash screen logic.
-        └── split_bill_controller.dart - Handles bill splitting.
-        └── terms_controller.dart - Manages terms and conditions.
-        └── transactions_controller.dart - Controls transaction functionalities.
-```
-### Models
-
-This directory contains all the models of your application. Each model is located in a separate folder making it easy to combine group of files related to that particular model. All the model specific files will be placed in their respective directories as shown in the example below:
+Components in this application represent reusable UI elements and specific sections of the user interface. Each component is designed to serve a specific function, whether it's displaying data, managing user interactions, or supporting layout structure. The components are organized based on functionality to make the structure intuitive and maintainable:
 
 ```
-lib\presentation\models
-              └── all_split_bills_model.dart - Model for all split bills.
-              └── avatar_model.dart - Model for user avatars.
-              └── blocked_user_model.dart - Model for blocked users.
-              └── booths_model.dart - Model for booths.
-              └── card_details_model.dart - Model for card details.
-              └── chat_user_model.dart - Model for chat users.
-              └── circle_chat_model.dart - Model for circle chats.
-              └── circle_qr_scan_model.dart - Model for circle QR scans.
-              └── circle_users_model.dart - Model for circle users.
-              └── cirlce_Detail_model.dart - Model for circle details.
-              └── error_response_model.dart - Model for error responses.
-              └── financial_home_model.dart - Model for financial home.
-              └── get_all_circle_model.dart - Model for getting all circles.
-              └── get_all_circles_as_admin.dart - Model for getting all circles as admin.
-              └── get_all_friends_model.dart - Model for getting all friends.
-              └── get_all_icon_model.dart - Model for getting all icons.
-              └── get_avatar_model.dart - Model for getting avatars.
-              └── get_friend_request_model.dart - Model for getting friend requests.
-              └── search_friend_model.dart - Model for searching friends.
-              └── search_users_model.dart - Model for searching users.
-              └── splash_model.dart - Model for splash screen.
-              └── suggested_users_model.dart - Model for suggested users.
-              └── third_user_model.dart - Model for third users.
-              └── transaction_reasons_model.dart - Model for transaction reasons.
-              └── user_model.dart - Model for users.
+src\components
+        └── aboutUs.js - Displays information about the company or platform.
+        └── adminActivity.js - Shows recent activity performed by admins.
+        └── allAdmins.js - Lists all admin users and their roles.
+        └── avatar.js - Represents a user avatar component, allowing users to display and edit profile images.
+        └── billingHistory.js - Displays the user's billing history and past transactions.
+        └── billingInfo.js - Shows billing information, including payment details.
+        └── blockedList.js - Lists all users who are currently blocked.
+        └── cardStatus.js - Displays the current status of cards, such as active or inactive.
+        └── circleDetail.js - Shows detailed information for a specific user circle.
+        └── circles.js - Lists all user-created circles and provides options to manage them.
+        └── colors.js - Allows customization of color themes or elements within the app.
+        └── communityRules.js - Displays the platform's community guidelines and rules.
+        └── createdPolls.js - Lists all polls created by the user and their statuses.
+        └── customizeCalendar.js - Provides options for users to personalize calendar views.
+        └── userGraph.js - Displays a graph or chart of user data, such as activity or statistics.
+        └── deleteCirclePopup.js - Popup component for confirming the deletion of a circle.
+        └── deleteNotePopup.js - Popup component for confirming the deletion of a note.
+        └── deleteUserPopup.js - Popup component for confirming the deletion of a user account.
+        └── friendListGraphs.js - Displays data visualization of the friend list, such as mutual friends or connections.
+        └── navbar.js - Top navigation bar that includes links to main sections and quick actions.
+        └── notesDetail.js - Shows detailed information for a selected note.
+        └── overviewCard.js - A summary card that provides an overview of key statistics or information.
+        └── reportCircle.js - Allows users to report a specific circle for inappropriate content or behavior.
+        └── stats.js - Displays various statistics and data insights.
+        └── transactions.js - Lists all user transactions with options to view, filter, or manage them.
 ```
 
 
-### Presentation
+### Redux
 
-This directory contains all the ui of your application. Each screen is located in a separate folder making it easy to combine group of files related to that particular screen. All the screen specific widgets will be placed in `widgets` directory as shown in the example below:
+Redux is used to manage the application's state in a centralized way. Each component of Redux (provider, reducers, store, etc.) has a distinct role in managing, updating, and accessing state throughout the app. This folder structure keeps your Redux logic modular and organized:
 
 ```
-lib\presentation\screens
-             └── Authentication         - Screens related to user authentication. 
-             └── Financial              - All financial-related screens of the app. 
-             └── Home                   - Home screen of the app. 
-             └── Onboarding             - Onboarding screen of the app. 
-             └── Profile                - User profile screen of the app. 
-             └── Services               - Screens related to services in the app. This is old design of Service, later removed.
-             └── Settings               - Settings screen of the app. 
-             └── Social                 - Screens related to social activities in the app.
+src\redux
+        └── provider - Wraps the application to give access to the Redux store in all components.
+        └── reducers - Manages application state.
+        └── store.js - Creates and configures the Redux store, applying middleware like Redux Thunk.
 ```
 
 ### Utils
 
-Contains the common file(s) and utilities used in a project. The folder structure is as follows: 
+Utility functions such as formatChatData and getCurrentMonthOption are general-purpose functions that perform specific tasks, like formatting data or fetching options. These functions can be imported wherever they are needed, providing cleaner and more readable code:
 
 ```
-lib\core\utils
-lib\core\utils\CustomDialogs
-lib\core\utils\Toast
-```
-
-### Widgets
-
-Contains the common widgets that are shared across multiple screens. For example, Button, TextField etc.
-
-```
-lib\widgets
-```
-
-### Routes
-lib\core\routes\app_routes.dart
-This file contains all the routes for your application. Some routes are Named and some are simple routing with Getx with Parameters
-
-```dart
-import 'package:flutter/material.dart';
-class AppRoutes {
-    static const String splashScreen = '/splash_screen';
-  static const String onBoardingScreen = '/on_boarding_screen';
-  static const String onSignUpScreen = '/on_sign_up_screen';
-  static const String bottomNavigation = '/bottom_navigation';
-  static const String onSignInScreen = '/on_sign_in_screen';
-  static const String onForgotPasswordScreen = '/on_forgot_password_screen';
-  static const String onPasswordChange = '/on_password_change_screen';
-.............................
-.............................
-static List<GetPage> pages = [
-    GetPage(
-      name: initialRoute,
-      page: () => SplashScreen(),
-      bindings: [
-        SplashBinding(),
-      ],
-    ),
-    GetPage(
-      name: onBoardingScreen,
-      page: () => OnBoardingScreen(),
-    ),
-    GetPage(
-      name: onSignUpScreen,
-      binding: SignUpBinding(),
-      page: () => SignUpScreen(),
-    ),
-    GetPage(
-      name: bottomNavigation,
-      bindings: [
-        BottomNavigationBinding(),
-      ],
-      page: () => BottomNavigation(),
-    ),
-  
-......
-......]
-
-
-}
+src\utils
+    └── formatChatData.js - Formats raw chat data into a more user-friendly structure for display in the chat UI.
+    └── getCurrentMonthOption.js - Returns the current month in a specific format or as an option for dropdowns or date selectors.
 ```
 
 ### Main
 
-This is the starting point of the application. All the application level configurations are defined in this file i.e, theme, routes, title, orientation etc.
+The App component serves as the root of the application. It initializes global styles and configurations, including Bootstrap and custom CSS.
+import React , {useEffect , useState}from "react";
+import "./App.css";
+import OurRoutes from "./Routes/OurRoutes.tsx";
+import "./../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Toaster } from "sonner";
+import { Spinner } from "react-bootstrap";
 
-```dart
-import 'dart:convert';
-.....................
-..............................
-..................................
-Future<void> main() async {
-  ```dart
-  // Ensure Flutter framework is initialized
-  WidgetsFlutterBinding.ensureInitialized();
+function App() {
+  const [isLoading, setIsLoading] = useState(true);
 
-  // Initialize deep links
-  await UniServices.initDeepLinks();
+  // Let create async method to fetch fake data
+  useEffect(() => {
+    const fakeDataFetch = () => {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 2000);
+    };
 
-  // Initialize Firebase with platform-specific options
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
+    fakeDataFetch();
+  }, []);
+  return isLoading ? (
+  
+    <div className="loader">
+      <Spinner  className="spinner-border text-primary" />
+
+  </div>  
+  ) : (
+    <>
+    <div className="App">
+      <OurRoutes />
+    </div>
+    <ToastContainer />
+    <Toaster position="bottom-center" toastOptions={{ duration: 2500 }} />
+  </>
   );
-
-  // Initialize notification services
-  NotificationServices().initialize();
-
-  // Get device token for notifications and log it
-  notificationServices.getDeviceToken().then((value) {
-    Logger.log("Device Token: $value");
-  });
-
-  // Set up background message handler for Firebase Messaging
-  FirebaseMessaging.onBackgroundMessage(backgroundHandler);
-
-  // Record Flutter errors with Firebase Crashlytics
-  FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
-
-  // Initialize Hive with Hive Flutter
-  await Hive.initFlutter();
-
-  // Check if encryption key exists in secure storage
-  var containsEncryptionKey = await SecureUtils.storage.containsKey(key: 'encryptionKey');
-  if (!containsEncryptionKey) {
-    // Generate and save a new encryption key if it doesn't exist
-    var key = Hive.generateSecureKey();
-    var encodedKey = base64UrlEncode(key);
-    await SecureUtils.saveKey(key: encodedKey);
-    Logger.log("This is the ekey while writing: ${encodedKey.toString()}");
-    var encryptionKey = base64Url.decode(await SecureUtils.getKey() ?? '');
-    Logger.log("This is the ekey read after writing from storage: ${encryptionKey.toString()}");
-  } else {
-    // Retrieve and log the existing encryption key
-    var encryptionKey = base64Url.decode(await SecureUtils.getKey() ?? '');
-    Logger.log("Ennc ${encryptionKey.toString()}");
-    if (encryptionKey.isEmpty) {
-      // Regenerate and save a new encryption key if the existing one is empty
-      await SecureUtils.storage.delete(key: 'encryptionKey');
-      var key = Hive.generateSecureKey();
-      var encodedKey = base64UrlEncode(key);
-      await SecureUtils.saveKey(key: encodedKey);
-      encryptionKey = base64Url.decode(await SecureUtils.getKey() ?? '');
-    }
-    Logger.log("This is the ekey read from storage: ${encryptionKey.toString()}");
-  }
-
-  // Register Hive adapters
-  Hive.registerAdapter(ChatAdapter());
-  Hive.registerAdapter(CirclesModelAdapter());
-  Hive.registerAdapter(MessageListModelAdapter());
-  Hive.registerAdapter(CircleMsgModelAdapter());
-
-  // Initialize preferences and language settings
-  await PrefUtils().init();
-  await ChangeLanguage().loadLanguage();
-
-  // Set preferred device orientation and run the app
-  Future.wait([
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-    ]),
-  ]).then((value) {
-    Logger.init(kReleaseMode ? LogMode.live : LogMode.debug);
-    Logger.log("Main function");
-    runApp(MyApp(
-      list: messageList,
-    ));
-  });
-  ```
-
-## My App main.dart
-
-The application includes security checks to ensure it is not running on compromised devices, emulators, or while being debugged. These checks are implemented in the `MyApp` class within the `initPlatformState` method. If any of these conditions are detected, the application will display a security alert and prevent further use.
-```dart
-class MyApp extends StatefulWidget {
-  final list;
-  const MyApp({super.key, this.list});
-
-  @override
-  State<MyApp> createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
-  bool amICompromisedd = false;
-  bool amIEmulatorr = false;
-  bool amIDebuggedd = false;
+export default App;
 
-  @override
-  void initState() {
-    super.initState();
-    // Add observer to listen to app lifecycle changes
-    WidgetsBinding.instance.addObserver(this);
-    // Uncomment the following line to initialize platform state after the first frame is rendered
-    // WidgetsBinding.instance.addPostFrameCallback((_) {
-    //   initPlatformState();
-    // });
-  }
-
-  @override
-  void dispose() {
-    // Remove observer when the widget is disposed
-    WidgetsBinding.instance.removeObserver(this);
-    super.dispose();
-  }
-
-  @override
-  Future<void> didChangeAppLifecycleState(AppLifecycleState state) async {
-    // Handle app lifecycle changes
-    if (state == AppLifecycleState.resumed) {
-      try {
-        // Emit socket event to get undelivered messages when app is resumed
-        SocketService.socket.emit('getUndeliveredMessages', {});
-      } catch (e) {
-        // Handle error
-      }
-    }
-  }
-
-  // Uncomment the following method to initialize platform state
-  // Future<void> initPlatformState() async {
-  //   bool amICompromised = false;
-  //   bool amIEmulator = false;
-  //   bool amIDebugged = false;
-
-  //   try {
-  //     // Check if the device is compromised, an emulator, or being debugged
-  //     amICompromised = await Rjsniffer.amICompromised() ?? false;
-  //     amIEmulator = await Rjsniffer.amIEmulator() ?? false;
-  //     amIDebugged = await Rjsniffer.amIDebugged() ?? false;
-  //   } on PlatformException {}
-  //   Logger.log("compromised: $amICompromised");
-  //   Logger.log("Emulator: $amIEmulator");
-  //   Logger.log("Debugged: $amIDebugged");
-
-  //   setState(() {
-  //     amICompromisedd = amICompromised;
-  //     amIEmulatorr = amIEmulator;
-  //     amIDebuggedd = amIDebugged;
-  //   });
-  // }
-
-  @override
-  Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: Size(393, 852),
-      minTextAdapt: true,
-      splitScreenMode: true,
-      builder: (_, child) {
-        return GetMaterialApp(
-          navigatorKey: UniServices.navigatorKey,
-          builder: (context, child) {
-            return Overlay(
-              initialEntries: [
-                OverlayEntry(
-                  builder: (context) {
-                    // Show security alert if the device is compromised, an emulator, or being debugged
-                    if (amICompromisedd || amIEmulatorr || amIDebuggedd) {
-                      String message = '';
-
-                      if (amICompromisedd) {
-                        message += 'You cannot use the app on a compromised device. ';
-                      }
-                      if (amIEmulatorr) {
-                        message += 'You cannot use the app on an emulator. ';
-                      }
-                      if (amIDebuggedd) {
-                        message += 'You cannot use the app while it is being debugged. ';
-                      }
-
-                      return PopScope(
-                        canPop: false,
-                        child: AlertDialog(
-                          title: Text('Security Alert'),
-                          content: Text(message),
-                          actions: <Widget>[
-                            ElevatedButton(
-                              child: Text('Exit'),
-                              onPressed: () {
-                                // Exit the app
-                                SystemNavigator.pop();
-                              },
-                            ),
-                          ],
-                        ),
-                      );
-                    }
-                    return child!;
-                  },
-                ),
-              ],
-            );
-          },
-          debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            primarySwatch: ColorConstant.customMaterialColor,
-            visualDensity: VisualDensity.standard,
-            appBarTheme: AppBarTheme(
-              backgroundColor: ColorConstant.whiteFB,
-              elevation: 0,
-              scrolledUnderElevation: 0,
-              shadowColor: Colors.transparent,
-            ),
-            textSelectionTheme: TextSelectionThemeData(
-              selectionHandleColor: ColorConstant.brandGreen,
-              cursorColor: ColorConstant.brandGreen,
-              selectionColor: Colors.lightGreen,
-            ),
-            primaryColor: ColorConstant.brandGreen,
-          ),
-          translations: AppLocalization(),
-          locale: Get.deviceLocale ?? Locale('en', 'US'), // Locale for English
-          fallbackLocale: const Locale('en', 'US'),
-          title: 'Clync',
-          initialBinding: InitialBindings(),
-          initialRoute: AppRoutes.initialRoute,
-          getPages: AppRoutes.pages,
-        );
-      },
-    );
-  }
-}
-```
 
 
 ## Conclusion
 
-In conclusion, this README provides a detailed guide to understanding and working with the Clync project. It covers the system requirements, setup instructions, and usage steps to get started with the project. The document also outlines the project's folder structure, explaining the purpose of each directory and file at general level, which helps in maintaining a clean and organized codebase. Additionally, it lists the libraries and tools used, along with their versions and descriptions, ensuring that developers are aware of the project's dependencies. By following this guide, developers can efficiently set up, run, and contribute to the Clync project, leveraging its robust architecture and comprehensive feature set.
+In conclusion, this README provides a detailed guide to understanding and working with the Clync Dashboard. It covers the system requirements, setup instructions, and usage steps to get started with the project. The document also outlines the project's folder structure, explaining the purpose of each directory and file at general level, which helps in maintaining a clean and organized codebase. Additionally, it lists the libraries and tools used, along with their versions and descriptions, ensuring that developers are aware of the project's dependencies. By following this guide, developers can efficiently set up, run, and contribute to the Clync project, leveraging its robust architecture and comprehensive feature set.
 
 We will be happy to answer any questions.
 
